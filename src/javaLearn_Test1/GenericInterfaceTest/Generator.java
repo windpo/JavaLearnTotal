@@ -1,0 +1,10 @@
+package GenericInterfaceTest;
+//泛型接口使用测试
+//接口：即函数声明
+
+//定义一个泛型接口
+public interface Generator<T> {
+    public T add();
+}
+
+
