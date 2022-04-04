@@ -1,13 +1,18 @@
-package regularExperssion;
+package javaLearn_Test3.regularExperssion;
+
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
  * 体验正则表达式威力，体现正则表达式处理文本带来的威力
+ * @author 风之诗
  */
 public class Regexp_ {
         public static void main(String[] args) {
+                /**
+                 * 三段内容，分别是java的基本介绍，html网页代码，一些地址
+                 */
                 String content="1995年，互联网的蓬勃发展给了Oak机会。业界为了使死板、单调的静态网页能够“灵活”起来，急需一种" +
                         "软件技术来开发一种程序，这种程序可以通过网络传播并且能够跨平台运行。于是，世界各大IT企业为此纷纷投入了大量的人力、物力和财力。这个时候，Sun公司想起了那个被搁置起来很久的Oak，并且重新审视了那个用软件编写的试验平台，由于它是按照嵌入式系统硬件平台体系结构进行编写的，所以非常小，特别适用于网络上的传输系统，而Oak也是一种精简的语言，程序非常小，适合在网络上传输。Sun公司首先推出了可以嵌入网页并且可以随同网页在网络上传输的Applet（Applet是一种将小程序嵌入到网页中进行执行的技术）" +
                         "，并将Oak更名为Java（在申请注册商标时，发现Oak已经被人使用了，再想了一系列名字之后，最" +
@@ -93,18 +98,20 @@ public class Regexp_ {
                 //提取百度热搜
                 //(1).传统方法：使用遍历，代码量大，效率不高
                 //(2).正则表达式技术
+                //匹配url
+
 
                 //1.先创建一个pattern对象：模式的对象，正则表达式的对象
-                //Pattern pattern = Pattern.compile("[a-zA-Z]+");
+                Pattern pattern = Pattern.compile("[a-zA-Z]+");
                 //Pattern pattern = Pattern.compile("[0-9]+");
                 //Pattern pattern = Pattern.compile("([0-9])+|([a-zA-Z]+)");
                 //Pattern pattern = Pattern.compile("<span class=\"title-content-title\">(\\S*)</span>");
-                Pattern pattern = Pattern.compile("\\d+\\.\\d+\\.\\d+\\.\\d+");
+                //Pattern pattern = Pattern.compile("\\d+\\.\\d+\\.\\d+\\.\\d+");
                 //2.创建一个匹配器对象：就是按照pattern对象的模式，到content的文本中进行匹配和解释的对象
-                Matcher matcher = pattern.matcher(content3);
+                Matcher matcher = pattern.matcher(content);
                 //matcher.find()方法，即在文本中寻找字符串，找到返回true，未找到返回false
                 //匹配字符串
-                int no=0;
+                int no=0;       
                 while(matcher.find()){
                         //匹配内容，文本，放到m.gruop(0)中
                         System.out.println("找到: "+(++no)+" "+ matcher.group(0));
