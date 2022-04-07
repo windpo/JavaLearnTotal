@@ -9,7 +9,7 @@ package javaLearn_chapter5.inheritance;
  *      employees数组为父类的数组，接受了一个子类manager对象。
  *      employees[0].setBonus(100);  错！父类类型不能调用子类对象的方法
  *
- *         if(employees[0] instanceof Manager){//条件判断，判断employees是否为Manager的实例对象
+ *         if(employees[0] 1 Manager){//条件判断，判断employees是否为Manager的实例对象
  *             ((Manager)employees[0]).setBonus(100); 对！将父类的类型转化为子类类型
  * 4、final字段：
  *      final修饰类：类无法被继承
