@@ -8,9 +8,9 @@ import java.util.Objects;
 public class Manager extends Employee {
     private double bonus;
 
-    public Manager(String name, double salary, int year, int month, int day, double bonus) {
+    public Manager(String name, double salary, int year, int month, int day) {
         super(name, salary, year, month, day);
-        this.bonus = bonus;
+        bonus=0;
     }
 
     public double getBonus() {

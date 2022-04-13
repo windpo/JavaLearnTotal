@@ -11,8 +11,8 @@ public class RegExp04 {
         /**
          *
          *  *:表示匹配指定字符的0到n次  (abc)*-->abc、abcabc
-         *  +：表示匹配指定字符的1到n次  m+(abc)-->m、mabc、mabcabc
-         *  ?:表示匹配指定字符的0或1次  m+abc?--->mab、mabc
+         *  +：表示匹配指定字符的1到n次  m(abc)+-->mabc、mabcabc
+         *  ?:表示匹配指定字符的0或1次  mabc?--->mab、mabc
          *  {n}:匹配长度为n的指定字符串  [abcd]{3}---->abc、acd、adc、bcd。。。。
          *  {n,}:匹配长度最少为n的指定字符串  [abcd]{4,}---->abcd、aabcd、bcdaaaa
          *  {a,b}:匹配长度最少为a最多为b的指定字符串 [abcd]{1,2}---->ab、a、cd

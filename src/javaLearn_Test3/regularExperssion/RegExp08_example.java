@@ -35,7 +35,7 @@ public class RegExp08_example {
         //先确定url的开头部分 https：// |http：//
         //通过([\w-]+\.)+[\w-]+  来匹配www.baidu.com
         //通过(\/[\w-#?=&/%.]*)?$  来匹配最后的字符，注意：[]中的内容全部均不用转意
-        String regString5="^((https?)://)?([\\w-]+\\.)+[\\w-]+(\\/[\\w-#?=&/%.]*)?$";
+        String regString5="^((https?)://)?([\\w-]+\\.)+[\\w-]+(\\/[\\w-#?=&/%.]+)?$";
 
         Pattern pattern = Pattern.compile(regString5);
         Matcher matcher = pattern.matcher(content);

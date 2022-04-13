@@ -9,6 +9,7 @@ public class RegExp09_matcher {
         String regString="xuyang";
         Pattern pattern = Pattern.compile(regString);
         Matcher matcher = pattern.matcher(content);
+
         /**
          *   matcher.start():返回找到的字符串的首索引
          *   matcher.end():返回找到的字符串的末尾索引+1

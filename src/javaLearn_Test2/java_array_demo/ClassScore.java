@@ -1,5 +1,5 @@
-package java_array_demo;
-import javax.xml.ws.Action;
+package javaLearn_Test2.java_array_demo;
+
 import java.util.*;
 //创建一个班的成绩并进行排名
 //字符串的输入？
