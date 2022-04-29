@@ -1,6 +1,7 @@
 package javaLearn_chapter6.lambda;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.util.Arrays;
 import java.util.Date;
@@ -30,7 +31,10 @@ public class LambdaTest {
         //或者(first,second)
         System.out.println(Arrays.toString(planets));
         //此处方法只有一个参数且该参数能由上下文推出，可省略括号和类型
-        Timer timer = new Timer(1000, (ActionEvent event) -> System.out.println("The time is " + new Date()));
+        Timer timer = new Timer(1000, (ActionEvent event) -> {
+            System.out.println("The time is " + new Date());
+            Toolkit.getDefaultToolkit().beep();
+        });
         //或者(event)或者event
         timer.start();
 

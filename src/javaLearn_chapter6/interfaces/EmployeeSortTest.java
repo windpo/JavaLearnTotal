@@ -20,6 +20,5 @@ public class EmployeeSortTest {
                 employees) {
             System.out.println("name="+e.getName()+",salary="+e.getSalary());
         }
-
     }
 }

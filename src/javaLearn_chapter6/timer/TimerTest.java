@@ -9,6 +9,7 @@ import java.time.Instant;
 /**
  * @author 风之诗
  * @version 1.0
+ * ActionListener接口
  * 程序使用swing中的Timer，将一个可操作的方法封装成对象传入Timer构造方法中，实现每隔一段时间就更新时间并响铃
  *      1、ActionListener接口，传入Timer的对象必须实现该接口，该接口中的actionPerformed方法为Timer每隔一段时间调用的方法
  *      2、ActionEvent e参数，获取事件的一些信息，如目前的时间等
