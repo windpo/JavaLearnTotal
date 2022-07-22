@@ -1,7 +1,6 @@
 package java_homework;
 
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * @author 风之诗

@@ -24,13 +24,12 @@ import java.net.Socket;
  */
 public class TCPClient {
     public static void main(String[] args) throws IOException {
-        System.out.println("服务器 启动.....");
         //1、创建一个本地输入流FileInputStream对象，构造方法中要绑定读取的数据源
         final FileInputStream fis = new FileInputStream("D:\\1.jpg");
 
         //2、创建一个客户端Socket对象，构造方法中绑定IP地址和端口号
         final Socket socket = new Socket("127.0.0.1", 6666);
-
+        System.out.println("客户端，启动...");
         //3、使用Socket中的方法getOutputStream,获取输出流对象
         final OutputStream outputStream = socket.getOutputStream();
 
@@ -43,9 +42,9 @@ public class TCPClient {
         }
 
         //注意：read方法在未接受到一个-1的结束标志时，读取不会结束，会进入阻塞状态，此时需要用shutdown方法来关闭OutputStream流
-        //禁用此套接字的输出流。对于 TCP 套接字，任何以前写入的数据都将被发送，并且后跟 TCP 的正常连接终止序列。
+        //禁用此套接字的输出流。对于 TCP 套接字，任何以前写入的数据都将被发送，并且后跟 TCP 的正常连接终止序列(终止标记)。
         // 如果在套接字上调用 shutdownOutput() 后写入套接字输出流，则该流将抛出 IOException。
-        socket.shutdownOutput();
+        socket.shutdownOutput();//相当于给服务器一个标志说上传完毕了
         //6、使用Socket中的方法getInputStream，获取网络字节输入流InputStream对象
         final InputStream inputStream = socket.getInputStream();
 

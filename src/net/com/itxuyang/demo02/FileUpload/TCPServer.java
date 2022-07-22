@@ -3,7 +3,6 @@ package net.com.itxuyang.demo02.FileUpload;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.nio.charset.StandardCharsets;
 
 /**
  * @author 风之诗
@@ -28,7 +27,7 @@ public class TCPServer {
     public static void main(String[] args) throws IOException {
         //1、创建一个服务器ServerSocket对象，给系统要指定的端口号
         final ServerSocket serverSocket = new ServerSocket(6666);
-
+        System.out.println("服务器 启动.....");
         //2、使用ServerSocket对象中的accept方法，获取请求到的客户端Socket对象
         final Socket socket = serverSocket.accept();
 
@@ -40,7 +39,6 @@ public class TCPServer {
         if(!file.exists()){
             file.mkdirs();
         }
-
         //5、创建一个本地字节输出流FileOutputStream对象，构造方法中绑定要输出的目的地
         final FileOutputStream fileOutputStream = new FileOutputStream(file + "\\1.jpg");
 

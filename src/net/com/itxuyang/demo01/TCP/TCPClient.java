@@ -40,7 +40,7 @@ import java.net.Socket;
 public class TCPClient {
     public static void main(String[] args) throws IOException {
         //1、创建一个客户端对象Socket，构造方法创建一个流套接字并将其连接到指定 IP 地址的指定端口号
-        final Socket socket = new Socket("10.165.164.220", 8888);
+        final Socket socket = new Socket("127.0.0.1", 8888);//或者使用localhost也行
         System.out.println(socket.getInetAddress());
         //2、使用Socket对象中的方法getOutputStream（）获取网络字节输出流OutputStream对象
         final OutputStream outputStream = socket.getOutputStream();
